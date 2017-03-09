@@ -129,8 +129,4 @@ function plugin(Vue, opts) {
     Vue.prototype.$eventHub = eventHub
 }
 
-if (typeof window !== 'undefined' && window.Vue) {
-    window.Vue.use(plugin)
-}
-
 export default plugin
