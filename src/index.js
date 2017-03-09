@@ -6,7 +6,7 @@ class Events {
 
         if (callback) {
             cache = this.__events || (this.__events = {})
-            eventNames = eventNames.split(SPLIT_PATTERN)
+            eventNames = eventNames.trim().split(SPLIT_PATTERN)
 
             while (eventName = eventNames.shift()) {
                 (cache[eventName] || (cache[eventName] = [])).push(callback, ctx)
